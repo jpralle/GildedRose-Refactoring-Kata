@@ -1,9 +1,14 @@
 package com.gildedrose;
 
 class GildedRose {
+
+    //TODO extend documentation
+
+    CloudStorage storage;
     Item[] items;
 
-    public GildedRose(Item[] items) {
+    public GildedRose(Item[] items, CloudStorage storage) {
+        this.storage = storage;
         this.items = items;
     }
 
@@ -57,6 +62,7 @@ class GildedRose {
                     }
                 }
             }
+            storage.store(items[i]);
         }
     }
 }
